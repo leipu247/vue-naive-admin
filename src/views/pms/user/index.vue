@@ -112,7 +112,8 @@
 <script setup>
 import { MeCrud, MeModal, MeQueryItem } from '@/components'
 import { useCrud } from '@/composables'
-import { formatDateTime, withPermission } from '@/utils'
+import { withPermission } from '@/directives'
+import { formatDateTime } from '@/utils'
 import { NAvatar, NButton, NSwitch, NTag } from 'naive-ui'
 import api from './api'
 
@@ -235,7 +236,7 @@ const columns = [
             default: () => '超管专属',
             icon: () => h('i', { class: 'i-carbon:user-role text-14' }),
           }),
-          'superAdmin',
+          'SuperAdmin',
         ),
         h(
           NButton,
